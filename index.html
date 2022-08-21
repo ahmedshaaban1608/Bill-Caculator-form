@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bill Caculator</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Ahmed Shaaban">
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width" intial-scale="1.0">
+</head>
+
+<body>
+<section class="main-container">
+    <h1>Bill Caculator</h1>
+    <form>
+        <label for="billAmount">How much was your Bill?</label>
+        <span>$</span>
+        <input type="number" id="billAmount" name="billAmount" maxlength="6" required>
+        <label for="tip">How was your service?</label>
+        <select id="tip" name="tip" required >
+            <option value="0" disabled selected> -- Select an option --</option>
+            <option value="0.30" id="tip30">30% - Outstading</option>
+            <option value="0.20"  id="tip20">20% - Good</option>
+            <option value="0.15" id="tip15">15% it was okay</option>
+            <option value="0.10" id="tip10">10% - not bad</option>
+            <option value="0.05" id="tip5">5% - bad</option>
+        </select>
+        <label for="people">How many people are sharing the bill?</label>
+        <input type="number" id="people" name="people" maxlength="6" min="1" max="10" step="1" required><span> people</span>
+        <button type="button" id="calculate"> calculate </button>
+    </form>
+    <div id="totalBill">
+        <sup>$</sup><span id="bill">0.00</span>
+        <small id="each">each</small>
+    </div>
+</section>
+    <script type="text/javascript" src="script.js" defer></script>
+</body>
+
+</html>
